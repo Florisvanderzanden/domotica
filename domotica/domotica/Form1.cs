@@ -21,14 +21,21 @@ namespace domotica
 
         private void TestConnectionButton_Click(object sender, EventArgs e)
         {
-            OPCServer.Connect("CoDeSys.OPC.02");
+            try
+            {
+                OPCServer.Connect("CoDeSys.OPC.02");
+            }
+            catch
+            {
+                MessageBox.Show("connection failed");
+            }
             timer1.Start();
-            
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             OPCServer.updateItems();
+            testConnectionListBox.Items.Clear();
             for (int i = 0; i < OPCServer.Items.Count(); i++)
             {
                 testConnectionListBox.Items.Add(OPCServer.Items[i].ItemID);
