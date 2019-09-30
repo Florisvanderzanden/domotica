@@ -8,7 +8,7 @@ using OPC;
 using OPCDA;
 using OPCDA.NET;
 
-namespace WindowsFormsApp18
+namespace domotica
 {
     class OPCDriver
     {
@@ -45,8 +45,8 @@ namespace WindowsFormsApp18
             }
 
             /* add the items here */
-            Items = new OPCItemDef[2];  // only one node can be selected
-            Items[0] = new OPCItemDef("PLC1:.DI_CARDS", true, 0, typeof(void));
+            Items = new OPCItemDef[2];  // onlyone node can be selected
+            Items[0] = new OPCItemDef("PLC1:PLC_PRG.doorbell", true, 0, typeof(void));
             Items[1] = new OPCItemDef("PLC1:.DO_CARDS", true, 0, typeof(void));
 
             Debug.WriteLine("Creating OPC group");
