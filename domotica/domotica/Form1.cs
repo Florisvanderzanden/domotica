@@ -14,6 +14,7 @@ namespace domotica
     public partial class Form1 : Form
     {
         OPCDriver OPCServer = new OPCDriver();
+
         public Form1()
         {
             InitializeComponent();
@@ -41,6 +42,12 @@ namespace domotica
                 testConnectionListBox.Items.Add(OPCServer.Items[i].ItemID);
             }
             Debug.WriteLine(OPCServer.getItem("PLC1:PLC_PRG.doorbell").ToString());
+        }
+
+        private void getVoice_Click(object sender, EventArgs e)
+        {
+            SpeechToText speechToText = new SpeechToText(richTextBox1);
+            speechToText.getVoice();
         }
     }
 }

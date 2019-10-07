@@ -32,6 +32,8 @@
             this.TestConnectionButton = new System.Windows.Forms.Button();
             this.testConnectionListBox = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.getVoice = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // TestConnectionButton
@@ -56,11 +58,31 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // getVoice
+            // 
+            this.getVoice.Location = new System.Drawing.Point(13, 94);
+            this.getVoice.Name = "getVoice";
+            this.getVoice.Size = new System.Drawing.Size(75, 75);
+            this.getVoice.TabIndex = 2;
+            this.getVoice.Text = "getVoice";
+            this.getVoice.UseVisualStyleBackColor = true;
+            this.getVoice.Click += new System.EventHandler(this.getVoice_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(95, 94);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(305, 75);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.getVoice);
             this.Controls.Add(this.testConnectionListBox);
             this.Controls.Add(this.TestConnectionButton);
             this.Name = "Form1";
@@ -74,6 +96,8 @@
         private System.Windows.Forms.Button TestConnectionButton;
         private System.Windows.Forms.ListBox testConnectionListBox;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button getVoice;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
