@@ -15,6 +15,8 @@ namespace domotica
         DictationGrammar dictation;
         SpeechRecognitionEngine sr;
         RichTextBox textBox;
+        string finalResult;
+        bool isCompleted = false;
 
         public void getVoice()
         {
@@ -39,12 +41,11 @@ namespace domotica
             }
             catch
             {
-
+                
             }
         }
 
-        string finalResult;
-        private void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        public void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             try
             {
@@ -58,7 +59,6 @@ namespace domotica
             }
         }
 
-        bool isCompleted = false;
         private void EmulateRecognizeCompletedHandler(object sender, EmulateRecognizeCompletedEventArgs e)
         {
             try

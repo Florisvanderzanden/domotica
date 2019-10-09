@@ -34,6 +34,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.getVoice = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // TestConnectionButton
@@ -72,15 +73,24 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(95, 94);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(305, 75);
+            this.richTextBox1.Size = new System.Drawing.Size(305, 333);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(423, 18);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(260, 264);
+            this.listBox1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.getVoice);
             this.Controls.Add(this.testConnectionListBox);
@@ -98,6 +108,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button getVoice;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
